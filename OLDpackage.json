@@ -13,15 +13,11 @@
     "babel": "babel ./src/**/* -d dist",
     "dev": "yarn webpack --config ./webpack.config.js",
     "postinstall": "electron-builder install-app-deps",
-    "rebuild-node-vad": "npm rebuild node-vad --update-binary",
     "js-check": "standard",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "prepack": "check-for-leaks"
+    "dist": "electron-builder"
   },
   "standard": {
     "ignore": [
-      "/src/lib/",
       "/src/css/",
       "node_modules/",
       "dist/"
@@ -38,10 +34,10 @@
       "./src/*.css",
       "./src/*.svg",
       "./src/*.onnx",
+      "./src/*.wasm",
       "./src/assets/**/*"
     ],
     "extraResources": [
-      "./src/lib/**",
       "./src/assets/**"
     ],
     "extraMetadata": {
@@ -95,11 +91,9 @@
     "node-polyfill-webpack-plugin": "^1.0.2",
     "node-sass": "^6.0.0",
     "prettier": "^2.2.1",
-    "react-app-polyfill": "^2.0.0",
     "redux-logger": "^3.0.6",
     "regenerator-runtime": "^0.13.7",
     "sass-loader": "^12.1.0",
-    "shx": "^0.3.3",
     "standard": "^16.0.3",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.17",

@@ -27,13 +27,15 @@
     "files": [
       "./dist/**/*",
       "./dist/index.html",
-      "./src/*.js"
+      "./src/*.js",
+      "./src/*.wasm"
     ],
     "extraFiles": [
       "./src/*.json",
       "./src/*.css",
       "./src/*.svg",
       "./src/*.onnx",
+      "./src/*.wasm",
       "./src/assets/**/*"
     ],
     "extraResources": [
