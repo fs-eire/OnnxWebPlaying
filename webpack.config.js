@@ -209,6 +209,7 @@ var renderer_config =  {
           },
           {
             from: path.resolve(__dirname, "./node_modules/onnxruntime-web/dist/*.wasm"),
+            //from: path.resolve(__dirname, "./dist/onnxruntime-web/*wasm"),
             to: path.resolve(__dirname, "[name][ext]")
           },
         ],
