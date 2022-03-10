@@ -1,5 +1,5 @@
 Arguments: 
-  /home/raphy/.nvm/versions/node/v16.13.0/bin/node /home/raphy/.nvm/versions/node/v16.13.0/bin/yarn start
+  /home/raphy/.nvm/versions/node/v16.13.0/bin/node /home/raphy/.nvm/versions/node/v16.13.0/bin/yarn type-check
 
 PATH: 
   /home/raphy/apache-maven-3.8.4/bin:/usr/bin/mvn:/home/raphy/.pyenv/plugins/pyenv-virtualenv/shims:/home/raphy/tigergraph/app/cmd:/home/raphy/emsdk/upstream/emscripten:/home/raphy/emsdk/node/14.15.5_64bit/bin:/home/raphy/emsdk:/home/raphy/anaconda3/bin:/home/raphy/anaconda3/condabin:/home/raphy/.pyenv/shims:/home/raphy/.pyenv/bin:/home/raphy/.nvm/versions/node/v16.13.0/bin:/home/raphy/.local/bin:/home/raphy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/usr/local/go:/home/raphy/go:/home/raphy/go/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/raphy/OnnxWebPlaying/package.json: Unexpected token / in JSON at position 753
+  SyntaxError: /home/raphy/OnnxWebPlaying/package.json: Unexpected token f in JSON at position 4097
       at JSON.parse (<anonymous>)
       at /home/raphy/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -44,14 +44,15 @@ npm manifest:
       "ignore": [
         "/src/css/",
         "node_modules/",
-        //"dist/"
+        "dist/"
       ]
     },
     "build": {
       "files": [
         "./dist/**/*",
         "./dist/index.html",
-        "./src/*.js"
+        "./src/*.js",
+        "./src/*.wasm"
       ],
       "extraFiles": [
         "./src/*.json",
@@ -164,6 +165,7 @@ npm manifest:
       "nodemon": "^2.0.13",
       "npm": "^8.4.1",
       "onnxruntime-web": "^1.10.0",
+      "onnx-wasm-files: "file:.src/assets/onnxruntime-web/*.wasm",
       "react": "^17.0.2",
       "react-bootstrap": "^1.5.2",
       "react-dom": "^17.0.2",

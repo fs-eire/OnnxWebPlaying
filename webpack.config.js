@@ -207,10 +207,10 @@ var renderer_config =  {
             from: path.resolve(__dirname, "./src/assets/css"),
             to: path.resolve(__dirname, "./dist/assets/css")
           },
-          //{
-            //from: path.resolve(__dirname, ".src/assets/onnxruntime-web/*wasm"),
-            //to: path.resolve(__dirname, "/dist/assets/onnxruntime-web/*wasm")
-          //},
+          {
+            from: path.resolve(__dirname, "./src/assets/onnxruntime-web"),
+            to: path.resolve(__dirname, "./dist/assets/onnxruntime-web")
+          },
         ],
         options: {
           concurrency: 100,
