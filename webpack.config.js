@@ -208,7 +208,7 @@ var renderer_config =  {
             to: path.resolve(__dirname, "./dist/assets/css")
           },
           {
-            from: path.resolve(__dirname, "./src/assets/onnxruntime-web"),
+            from: path.resolve(__dirname, "./node_modules/onnxruntime-web/dist"),
             to: path.resolve(__dirname, "./dist/assets/onnxruntime-web")
           },
         ],

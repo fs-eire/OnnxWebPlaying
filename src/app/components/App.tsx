@@ -5,7 +5,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import '../../assets/css/global.css';
 
-import ort from 'onnxruntime-web'
+import * as ort from 'onnxruntime-web'
 
 
 function App() {
@@ -18,6 +18,9 @@ function App() {
       // the model in this example contains a single MatMul node
       // it has 2 inputs: 'a'(float32, 3x4) and 'b'(float32, 4x3)
       // it has 1 output: 'c'(float32, 3x3)
+
+      // override wasm path
+      ort.env.wasm.wasmPaths = new URL('./assets/onnxruntime-web/', document.baseURI).href
 
       // @ts-ignore
       let session = await ort.InferenceSession.create('../../assets/onnx/model.onnx');
